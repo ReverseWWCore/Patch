@@ -221,7 +221,7 @@ index a81eec5..d004c50 100644
  char const ItemExtendedCostEntryfmt[] = "niiiiiiiiiiiiiix";
  char const ItemLimitCategoryEntryfmt[] = "nxxxxxxxxxxxxxxxxxii";
 diff --git a/src/server/game/Entities/Item/Item.cpp b/src/server/game/Entities/Item/Item.cpp
-index ed4341d..dc342bb 100644
+index d87e1e8..bfd6e53 100644
 --- a/src/server/game/Entities/Item/Item.cpp
 +++ b/src/server/game/Entities/Item/Item.cpp
 @@ -16,6 +16,7 @@
@@ -241,7 +241,7 @@ index ed4341d..dc342bb 100644
      stmt->setUInt32(0, itemGuid);
      trans->Append(stmt);
 diff --git a/src/server/game/Entities/Player/Player.cpp b/src/server/game/Entities/Player/Player.cpp
-index d570ecb..409a4d3 100644
+index 04f246d..cb3c1b9 100644
 --- a/src/server/game/Entities/Player/Player.cpp
 +++ b/src/server/game/Entities/Player/Player.cpp
 @@ -16,6 +16,7 @@
@@ -252,7 +252,7 @@ index d570ecb..409a4d3 100644
  #include "Player.h"
  #include "AccountMgr.h"
  #include "AchievementMgr.h"
-@@ -12441,7 +12442,11 @@ void Player::SetVisibleItemSlot(uint8 slot, Item* pItem)
+@@ -12447,7 +12448,11 @@ void Player::SetVisibleItemSlot(uint8 slot, Item* pItem)
  {
      if (pItem)
      {
@@ -265,7 +265,7 @@ index d570ecb..409a4d3 100644
          SetUInt16Value(PLAYER_VISIBLE_ITEM_1_ENCHANTMENT + (slot * 2), 0, pItem->GetEnchantmentId(PERM_ENCHANTMENT_SLOT));
          SetUInt16Value(PLAYER_VISIBLE_ITEM_1_ENCHANTMENT + (slot * 2), 1, pItem->GetEnchantmentId(TEMP_ENCHANTMENT_SLOT));
      }
-@@ -12567,6 +12572,7 @@ void Player::MoveItemFromInventory(uint8 bag, uint8 slot, bool update)
+@@ -12573,6 +12578,7 @@ void Player::MoveItemFromInventory(uint8 bag, uint8 slot, bool update)
  {
      if (Item* it = GetItemByPos(bag, slot))
      {
@@ -274,10 +274,10 @@ index d570ecb..409a4d3 100644
          RemoveItem(bag, slot, update);
          it->SetNotRefundable(this, false);
 diff --git a/src/server/game/Scripting/ScriptLoader.cpp b/src/server/game/Scripting/ScriptLoader.cpp
-index ed0972c..b90d8d1 100644
+index e65c588..cfe9358 100644
 --- a/src/server/game/Scripting/ScriptLoader.cpp
 +++ b/src/server/game/Scripting/ScriptLoader.cpp
-@@ -1337,6 +1337,7 @@ void AddBattlegroundScripts()
+@@ -1296,6 +1296,7 @@ void AddBattlegroundScripts()
  #ifdef SCRIPTS
  /* This is where custom scripts' loading functions should be declared. */
  
@@ -285,7 +285,7 @@ index ed0972c..b90d8d1 100644
  #endif
  
  void AddCustomScripts()
-@@ -1344,5 +1345,6 @@ void AddCustomScripts()
+@@ -1303,5 +1304,6 @@ void AddCustomScripts()
  #ifdef SCRIPTS
      /* This is where custom scripts should be added. */
  
@@ -1584,10 +1584,10 @@ index 0000000..b18a2b9
 +    new WS_Transmogrification();
 +}
 diff --git a/src/server/worldserver/worldserver.conf.dist b/src/server/worldserver/worldserver.conf.dist
-index c4e19e8..52cf658 100644
+index 9577b3d..a5fc631 100644
 --- a/src/server/worldserver/worldserver.conf.dist
 +++ b/src/server/worldserver/worldserver.conf.dist
-@@ -2794,3 +2794,160 @@ Log.Async.Enable = 0
+@@ -2791,3 +2791,160 @@ Log.Async.Enable = 0
  
  #
  ###################################################################################################
