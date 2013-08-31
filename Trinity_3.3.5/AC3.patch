@@ -41,10 +41,10 @@ index 0000000..30f5515
 --- /dev/null
 +++ b/sql/PokerFace/Anticheat/anticheat_world.sql
 @@ -0,0 +1,6 @@
-+REPLACE INTO `command` (`name`,`security`,`help`) VALUES ('anticheat global', '2', 'Syntax: .anticheat 
-+global returns the total amount reports and the average. (top three players)'), ('anticheat player', '2', 
-+'Syntax: .anticheat player $name returns the players''s total amount of warnings, the average and the 
-+amount of each cheat type.'), ('anticheat handle', '2', 'Syntax: .anticheat handle [on|off] Turn on/off the 
++REPLACE INTO `command` (`name`,`security`,`help`) VALUES ('anticheat global', '2', 'Syntax: .anticheat
++global returns the total amount reports and the average. (top three players)'), ('anticheat player', '2',
++'Syntax: .anticheat player $name returns the players''s total amount of warnings, the average and the
++amount of each cheat type.'), ('anticheat handle', '2', 'Syntax: .anticheat handle [on|off] Turn on/off the
 +AntiCheat-Detection .'),
 +('anticheat delete', '2', 'Syntax: .anticheat delete [deleteall|$name] Deletes the report records of all the players or deletes all the reports of player $name.');
 \ No newline at end of file
@@ -1027,10 +1027,10 @@ index 350182e..7ca674e 100755
  #include "DatabaseEnv.h"
  #include "Config.h"
 @@ -1239,6 +1240,12 @@ void World::LoadConfigSettings(bool reload)
-     //Arena Spectators	
+     //Arena Spectators
      m_bool_configs[CONFIG_ARENA_SPECTATORS_ENABLE] = sConfig->GetBoolDefault("Arena.Spectators.Enable", false);
- 	
-+	//Anticheat
+       
++       //Anticheat
 +    m_bool_configs[CONFIG_ANTICHEAT_ENABLE] = ConfigMgr::GetBoolDefault("Anticheat.Enable", true);
 +    m_int_configs[CONFIG_ANTICHEAT_REPORTS_INGAME_NOTIFICATION] = ConfigMgr::GetIntDefault("Anticheat.ReportsForIngameWarnings", 70);
 +    m_int_configs[CONFIG_ANTICHEAT_DETECTIONS_ENABLED] = ConfigMgr::GetIntDefault("Anticheat.DetectionsEnabled",31);
@@ -1063,10 +1063,10 @@ index 24e4173..ed44148 100755
 @@ -328,6 +329,9 @@ enum WorldIntConfigs
      CONFIG_WARDEN_NUM_MEM_CHECKS,
      CONFIG_WARDEN_NUM_OTHER_CHECKS,
- 	CONFIG_DUEL_REWARD_SPELL_CAST,
+        CONFIG_DUEL_REWARD_SPELL_CAST,
 +    CONFIG_ANTICHEAT_REPORTS_INGAME_NOTIFICATION,
 +    CONFIG_ANTICHEAT_MAX_REPORTS_FOR_DAILY_REPORT,
-+	CONFIG_ANTICHEAT_DETECTIONS_ENABLED,
++       CONFIG_ANTICHEAT_DETECTIONS_ENABLED,
      INT_CONFIG_VALUE_COUNT
  };
  
