@@ -1,7 +1,4 @@
-Patch
-=====
-
-Patch -TrinityCore 3.3.5
+ Patch -TrinityCore 3.3.5
 
  Copyright (C) TrinityCore (http://www.trinitycore.org)
  Copyright (C) Eilo-Patches (https://github.com/eilo/Eilo-Patches)
@@ -31,8 +28,8 @@ can't remember the rest. will post them as I find the original owners.
 ##############
 
 ReanEmu posee muchos fixes y mejoras a base de algunos repos y autores muy 
-conocidos adem¨¢s de los nuestros propios, este documento detalla los componentes,
-parches y/o c¨®digo que contiene dentro este emulador de manera resumida:
+conocidos ademï¿½ï¿½s de los nuestros propios, este documento detalla los componentes,
+parches y/o cï¿½ï¿½digo que contiene dentro este emulador de manera resumida:
 
 Milestone0.0: Reiniciando el repo y readaptando cosas varias, inclusion de nuevos
               developers en git y la inclusion de texto de planeacion para union 
@@ -43,7 +40,7 @@ Milestone1.0: Jugabilidad en general, adecuaciones de codigo vario en mapas
               comportamiento de bgs, arenas, players-units-pets y mejoras.
 Milestone2.0: Mejoras en Instances y dungeons, escencialmente para darles funcionalidad
               y detalles menores de funcionamiento para tenerlas lo mas cercano
-			  a blizzlike, solucion de bugs varios.
+	      a blizzlike, solucion de bugs varios.
 Milestone3.0  Arreglos a Spells, sobre todo para estabilidad del pve y del
               pvp dentro de los reinos.
 Milestone4.0  Arreglos en quests, y cadenas de mision, esto incluye scripts
