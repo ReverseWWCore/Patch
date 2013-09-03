@@ -1,0 +1,53 @@
+Patch
+=====
+
+Patch -TrinityCore 3.3.5
+
+ Copyright (C) TrinityCore (http://www.trinitycore.org)
+ Copyright (C) Eilo-Patches (https://github.com/eilo/Eilo-Patches)
+ Copyright (C) TrinityCore-Patches (https://bitbucket.org/lordpsyan/trinitycore-patches)
+
+#####################
+#TrinityCore-Patches#
+#####################
+
+This is where I will put all the thanks I can remember. People who work their butts off on patches deserve a thank you.
+
+AC2 - Thanks Belove!
+City Conquest Originally from: http://www.ac-web.org/forums/showthread.php?t=89550
+posted by Hkarta
+Many of the other patches, like VIP Accounts, Guildhouses, Gamble... came from spgm's repository.
+
+Bots are back and compile, but not fully working. many quest things don't work, and teleporting bots is iffy at best.
+
+AHBot thanks to Aokromes. Much of that code is in with this one. I have posted a full ahbot with vip accounts both with and without glyphs. I am also adding VIP accounts for use without AHBOT.
+
+TeleNPC2 Original author : Wilibald09 (as stated in the patch) Updated by me for the past 3 or 4 years. There is a similar patch by Aokromes and maintained by thedevnull but not as recent.
+
+can't remember the rest. will post them as I find the original owners.
+
+##############
+#Eilo-Patches#
+##############
+
+ReanEmu posee muchos fixes y mejoras a base de algunos repos y autores muy 
+conocidos adem¨¢s de los nuestros propios, este documento detalla los componentes,
+parches y/o c¨®digo que contiene dentro este emulador de manera resumida:
+
+Milestone0.0: Reiniciando el repo y readaptando cosas varias, inclusion de nuevos
+              developers en git y la inclusion de texto de planeacion para union 
+              eficiente de codigo reestructurando modo de trabajo y organizando 
+              carpetas, branches, etc, adicion de codigo utilitario en general 
+              para complemento del nucleo y funciones de soporte.
+Milestone1.0: Jugabilidad en general, adecuaciones de codigo vario en mapas
+              comportamiento de bgs, arenas, players-units-pets y mejoras.
+Milestone2.0: Mejoras en Instances y dungeons, escencialmente para darles funcionalidad
+              y detalles menores de funcionamiento para tenerlas lo mas cercano
+			  a blizzlike, solucion de bugs varios.
+Milestone3.0  Arreglos a Spells, sobre todo para estabilidad del pve y del
+              pvp dentro de los reinos.
+Milestone4.0  Arreglos en quests, y cadenas de mision, esto incluye scripts
+              en c++ y SmartAI.
+Milestone5.0  Traducciones, e inclusion de varios dentro de tablas y strings
+              del emulador, ya sea en c++ o en sqls.
+Milestone6.0  Customs y varios
